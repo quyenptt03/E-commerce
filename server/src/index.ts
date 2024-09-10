@@ -1,4 +1,7 @@
 import { config } from "dotenv";
+import "express-async-errors";
+
+//express
 import express from "express";
 
 // others packages
@@ -11,7 +14,12 @@ import cookieParser from "cookie-parser";
 import connectDB from "./db/connect";
 
 // routes
-import { userRouter } from "./routers";
+import {
+  userRouter,
+  productRouter,
+  categoryRouter,
+  authRouter,
+} from "./routers";
 
 //middlewares
 import errorHandlerMiddleware from "./middlewares/error-handler";
@@ -30,10 +38,13 @@ app.use(cookieParser(process.env.JWT_SECRET));
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Hello, TypeScript + Node.js + Express!");
+  res.send("Hello World!");
 });
 
+app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/categories", categoryRouter);
+app.use("/api/v1/products", productRouter);
 
 app.use(errorHandlerMiddleware);
 
