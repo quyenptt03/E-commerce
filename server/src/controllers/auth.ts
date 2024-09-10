@@ -5,15 +5,12 @@ import { Response, Request } from "express";
 import { attachCookiesToResponse, createUserToken } from "../utils";
 
 const register = async (req: Request, res: Response) => {
-  const { first_name, last_name, email, password } = req.body;
+  const { first_name, last_name, email, password, role } = req.body;
   const emailAlreadyExist = await User.findOne({ email });
 
   if (emailAlreadyExist) {
     throw new CustomError.BadRequestError("Email already exists");
   }
-
-  const isFirstAccount = (await User.countDocuments({})) === 0;
-  const role = isFirstAccount ? "admin" : "user";
 
   const user = await User.create({
     first_name,

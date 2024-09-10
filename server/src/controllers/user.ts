@@ -27,7 +27,7 @@ const createUser = async (req: Request, res: Response) => {
 };
 
 const getAllUsers = async (req: Request, res: Response) => {
-  const roles = ["user", "manager"];
+  const roles = ["user", "seller"];
   const users = await User.find({ role: { $in: roles } }).select("-password");
   res.status(StatusCodes.OK).json({ users, count: users.length });
 };

@@ -1,6 +1,7 @@
 import { Schema, model, Document } from "mongoose";
 import validator from "validator";
 import { genSalt, hash, compare } from "bcrypt";
+import uniqueValidator from "mongoose-unique-validator";
 
 export interface IUser extends Document {
   id: string;
@@ -10,11 +11,12 @@ export interface IUser extends Document {
   password: string;
   address?: string;
   phone?: string;
+  avatar: object;
   role: string;
   comparePassword(candidatePassword: string): Promise<boolean>;
 }
 
-const userSchema = new Schema<IUser>(
+const UserSchema = new Schema<IUser>(
   {
     first_name: {
       type: String,
@@ -47,26 +49,36 @@ const userSchema = new Schema<IUser>(
       minLength: [10, "Phone must be 10 numbers"],
       maxLength: [10, "Phone must be 10 numbers"],
     },
+    avatar: {
+      type: {
+        path: String,
+        filename: String,
+      },
+    },
     role: {
       type: String,
-      enum: ["admin", "manager", "user"],
+      enum: ["admin", "seller", "user"],
       default: "user",
     },
   },
   { timestamps: true }
 );
 
-userSchema.pre("save", async function () {
+UserSchema.pre("save", async function () {
   if (!this.isModified("password")) return;
   const salt = await genSalt(10);
   this.password = await hash(this.password, salt);
 });
 
-userSchema.methods.comparePassword = async function (
+UserSchema.methods.comparePassword = async function (
   candidatePassword: string
 ) {
   const isMatch = await compare(candidatePassword, this.password);
   return isMatch;
 };
 
-export default model<IUser>("User", userSchema);
+UserSchema.plugin(uniqueValidator, {
+  message: "Error, expected {PATH} to be unique.",
+});
+
+export default model<IUser>("User", UserSchema);
