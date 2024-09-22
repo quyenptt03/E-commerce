@@ -120,6 +120,9 @@ const Datatable = ({ nameTable, columns, dataSource, dialog, url }) => {
             >
               Delete
             </div>
+               <Link to={`/${url}/${params.row.id}`} state={{ id: params.row.id }} style={{ textDecoration: "none" }}>
+                <div className="viewButton">Update</div>
+              </Link>
           </div>
         );
       },

@@ -23,6 +23,47 @@
           border-radius: 50%;
           object-fit: cover;
         }
+
+        .formInput {
+          width: 40%;
+            .dropLable {
+              font-size: 18px; /* Kích thước chữ của label */
+              margin-bottom: 10px; /* Khoảng cách giữa label và input */
+            }
+
+          
+          label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+          
+
+            .icon {
+              cursor: pointer;
+            }
+          }
+
+          input {
+              width: 200%;
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 10px;
+              margin-top: 9px;
+              font-size: 15px;
+          }
+        }
+        .selectedImages{
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          img{
+            border: 1px solid #ccc;
+            margin: 4px;
+            border-radius: 0%;
+          }
+      
+        }
       }
 
       .right {
@@ -79,9 +120,19 @@
                 font-size: 15px;
             }
           }
-
-          button {
-            width: 150px;
+          .selectedImages{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            img{
+              border: 1px solid #ccc;
+              margin: 4px
+            }
+        
+          }
+          .btnMargin button{
+            width: 100px;
+            margin-right: 10px;
           }
         }
       }
@@ -101,4 +152,50 @@
     width: 4px;
     margin-left: 5px;
   }
+}
+
+
+
+  
+.selectedColorsInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.colorPickerSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.selectedColors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.colorItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.colorBox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+.productMargin{
+  display: flex;
+  margin-top: 30px;
+  column-gap: 10px;
+  margin-right: -25px;
+}
+
+.colorInput{
+  padding: 2px !important;
+  width:250% !important;
 }

@@ -22,13 +22,10 @@ function CategoryDetail() {
     <>
     <div className='listCategoryDetail'>
         <div className='left'> <CardCategory key={category.id} item={category} /></div>
-
         <div className='right'><New inputs={categoriesInputs} title="Add Category" userType="category"/></div>
-        
     </div>
-    <div className='bottom'>
+    <div className='bottomCategory'>
         <Datatable nameTable="Product list of "columns={productsColumns} dataSource={productsRows} dialog={false} url="shops" />
-
     </div>
     </>
     
