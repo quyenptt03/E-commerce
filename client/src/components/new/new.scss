@@ -1,0 +1,104 @@
+.newContainer{
+    .top{
+      margin:20px;
+    }
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 40px 20px;
+      margin: 20px;
+      display: flex;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+  
+      
+
+      .left {
+        flex: 1;
+        text-align: center;
+
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .right {
+        flex: 2;
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: space-around;
+
+          .formInput {
+            width: 40%;
+              .dropLable {
+                font-size: 18px; /* Kích thước chữ của label */
+                margin-bottom: 10px; /* Khoảng cách giữa label và input */
+              }
+            
+              .dropSelect {
+                width: 108%; /* Chiều rộng chiếm 100% của container */
+                height: 40px; /* Chiều cao của select */
+                padding: 10px; /* Padding bên trong cho khoảng trống */
+                font-size: 16px;
+                  border: 1px solid #ccc;
+                  border-radius: 10px;
+                  color: #757575;
+
+                &:focus {
+                  outline: none; /* Bỏ đường viền khi focus */
+                  border-color: #777; /* Màu đường viền khi focus */
+                }
+              }
+            
+              
+            
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-size: 18px;
+            
+
+              .icon {
+                cursor: pointer;
+              }
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin-top: 9px;
+                font-size: 15px;
+            }
+          }
+
+          button {
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+
+.formInputAddType{
+  display:flex;
+  flex:3;
+  .formInput{
+    flex:2.7;
+  }
+  button{
+    margin-top: 10px;
+    flex: 0.3 1;
+    height: 21px;
+    width: 4px;
+    margin-left: 5px;
+  }
+}

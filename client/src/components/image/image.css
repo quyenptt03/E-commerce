@@ -1,0 +1,60 @@
+.imageCell {
+    display: flex;
+    flex-wrap: nowrap; /* Không cho phép xuống dòng */
+    overflow: auto; /* Thêm thanh cuộn nếu hình ảnh nhiều hơn */
+    max-width: 230px; /* Giới hạn chiều rộng của ô */
+    object-fit: cover;
+  }
+  
+  .productImage {
+    width: 50px; /* Đặt chiều rộng cho hình ảnh */
+    height: auto; /* Giữ tỉ lệ hình ảnh */
+    margin-right: 5px; /* Khoảng cách giữa các hình ảnh */
+  }
+  .modalHeader {
+    display: flex;
+    justify-content: space-between; /* Đặt khoảng cách giữa tiêu đề và nút */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px; /* Khoảng cách bên trong */
+    border-bottom: 2px solid #5e3321;
+    margin-bottom: 10px;
+  }
+  
+  .closeButton {
+    background: transparent; /* Không có nền */
+    border: none; /* Không có viền */
+    cursor: pointer; /* Con trỏ như một nút */
+    font-size: 1.5rem; /* Kích thước icon */
+  }
+  .modalImages{
+    align-items: center;
+    
+   
+  }
+  .modalImage{
+    width:30%;
+    height:auto;
+    margin:3px;
+    border-radius: 10px;
+    border:1px solid #ccc;
+}
+  .ReactModal__Overlay--after-open{
+    background-color: #a19b9bc2 !important;
+  }
+
+.ReactModal__Overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a19b9bc2 !important;
+
+  }
+  
+  .ReactModal__Content {
+    margin: auto; 
+    max-width: 60%; 
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+  }
+  
