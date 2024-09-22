@@ -1,0 +1,131 @@
+
+  
+  .userTitleContainer {
+    padding:20px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+
+  .userContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding:0px 20px 20px 20px;
+  }
+
+  .userUpdate {
+    border-radius: 10px;
+    flex: 2;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    border:1px solid #cacaca;
+    padding:2rem 2rem;
+  }
+  .userContainer1{
+    flex: 1;
+  }
+
+.userShowTop {
+  border-radius: 10px ;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    border:1px solid #cacaca;
+    padding:2rem 2rem;
+margin-bottom: 1rem;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+}
+.userShowBottom{
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    border:1px solid #cacaca;
+    padding:2rem 2rem;
+    border-radius: 10px;
+}
+  .userShowTopTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .userShowUsername {
+    font-weight: 600;
+  }
+  
+  .userShowUserTitle {
+    font-weight: 300;
+  }
+  
+  .userUpdateTitle,.userShowTitle{
+      font-size: 20px;
+      font-weight: 600;
+  }
+  
+  .userUpdateForm{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+  }
+  
+  .userUpdateItem{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+  }
+  
+  .userUpdateItem>label{
+      margin-bottom: 9px;
+      font-size: 18px;
+  }
+  
+  .userUpdateInput{
+      border: 1px solid #CCC;
+      BORDER-RADIUS: 10PX;
+      width: 306px;
+      height: 30px;
+  }
+  
+  .userUpdateRight{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+  .userUpdateUpload{
+      display: flex;
+      align-items: center;
+  }
+  
+  .userUpdateImg{
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 20px;
+  }
+  
+  .userUpdateIcon{
+      cursor: pointer;
+  }
+  
+  .userUpdateButton{
+    margin-right: 6px;
+  }
+ 
+
+  .Doimatkhau{
+    padding:  0 1rem 1rem 1rem;
+  }
+  .ChangePassTitle{
+    font-size: x-large;
+    padding: 1rem 0 0 1rem;
+  }
+  .userShowImg {
+    margin-bottom: 2px;
+    width: 150px;     
+    height: 150px;      
+    object-fit: cover;  /* Đảm bảo hình ảnh vừa khít trong khung */
+    border-radius: 50%; /* Bo tròn khung để tạo hình tròn */
+  }
+  
+  

@@ -1,0 +1,40 @@
+.css-f2jb3h-MuiPaper-root {
+    width: 240px;
+    height: 450px !important;
+}
+.tab_choose{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin:20px;
+    border-radius: 10px;
+ 
+}
+.tab_choose .MuiTabs-root .MuiTab-root {
+    font-weight: bold;  
+    
+    font-size: 18px !important;       
+  }
+  
+  .tab_choose .MuiTabs-root .MuiTab-root:hover {
+    color: var(--background--color);            
+  }
+  
+  .tab_choose .MuiTabs-root .MuiTab-root.Mui-selected {
+    color: var(--background--color);
+  }
+
+.MuiTabs-indicator {
+    background-color: var(--background--color) !important; /* Thay đổi màu của chỉ báo gạch dưới */
+  }
+  .css-355xbt-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, .css-355xbt-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+    color:  var(--background--color) !important;
+}
+.css-ak74bx-MuiButtonBase-root-MuiButton-root {
+    border: 1px solid rgba(163, 163, 163, 0.87)  !important;
+    color:  rgba(163, 163, 163, 0.87)  !important;
+}
+.css-et1ao3-MuiTypography-root {
+    font-family: "Open Sans", sans-serif!important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+
+}

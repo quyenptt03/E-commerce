@@ -1,0 +1,186 @@
+
+.form-wrap .title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color:var(--background--color);
+    text-align: center;
+  }
+  
+  
+  
+  
+  .form-wrap .password-show-toggle {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  
+  .form-wrap .btn-primary {
+      border-radius: 10px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      height: 50px;
+      font-weight: 700;
+      color:var(--text2--color);
+      font-size: 18px;
+      margin: 20px 0px;
+      cursor: pointer;
+  }
+  .form-wrap .btn-primary:hover {
+      background-color:var(--background--color);
+      border-color:var(--background--color);
+      color:#fff;
+  }
+  .form-wrap .social-account-wrap {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  
+  .form-wrap .social-account-wrap h4 {
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    position: relative;
+  }
+  
+  .form-wrap .social-account-wrap .social-account li {
+    width: calc(25% - 0);
+  }
+  
+  .form-wrap {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 26px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      z-index: -1;
+      border:1px solid #bbbbbb;
+  }
+  
+  
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .form-control:hover {
+      border: 1px solid var(--background--color);
+  
+    }
+    .form-control:focus {
+      border: 1px solid var(--background--color);
+      outline: none; 
+  }
+    .form-check-input {
+      margin-right: 10px;
+    }
+  
+    
+    .login_d-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .login-forgot,  .login-signup{
+      color:var(--text--color);   
+    }
+    .d-grid {
+      display: grid;
+    }
+    .login-forgot:hover{
+      color:var(--background--color); font-weight: bold;
+    }
+    .login-signup:hover 
+    {
+      color:var(--background--color); font-weight: bold;
+    }
+    .social-account {
+      margin-top: 10px;
+    }
+    
+    .social-account li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 10px;
+    }
+    
+    .social-account img {
+      width: 32px;
+      height: 32px;
+    }
+   .social-account li a {
+      display: inline-block;
+      border: 1px solid #d1d1d1;
+      padding: 10px;
+      border-radius: 10%;
+  }
+  .social-account li a:hover {
+      border: 1px solid var(--background--color);
+  }
+  .line-with-text {
+      position: relative;
+      text-align: center;
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .line-with-text:before,
+    .line-with-text:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 34%;
+      height: 1px;
+      background-color: #ccc;
+      transform: translateY(-50%);
+    }
+    
+    .line-with-text:before {
+      left: 0;
+    }
+    
+    .line-with-text:after {
+      right: 0;
+    }
+    
+    .line-with-text span {
+      background: #ffffff; /* Match the background color of the parent */
+      padding: 0 10px;
+    }
+    
+    .form-floating {
+      position: relative;
+      margin-bottom: 15px;
+    }
+    
+    
+    .form-floating label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 15px 0px 15px 17px;
+      font-size: 16px;
+      color: var(--text--color);
+      pointer-events: none;
+      transition: 0.3s;
+    }
+    .form-wrap .form-floating .form-control {
+      height: 50px !important;
+      border-radius: 10px !important;
+      margin: 0 0 14px 0;
+    }
+    .form-floating .form-control:focus ~ label{
+      top: -38px;
+      left: -10px;
+      color: var(--text--color);
+      font-size: 15px;
+    }
+  
+  
+  
