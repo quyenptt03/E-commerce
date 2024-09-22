@@ -37,7 +37,7 @@ app.use(morgan("tiny"));
 app.use(cookieParser(process.env.JWT_SECRET));
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Hello World!");
 });
 

@@ -59,8 +59,6 @@ const ProductSchema = new Schema<IProduct>(
     },
     colors: {
       type: [String],
-      default: ["#222"],
-      required: true,
     },
     featured: {
       type: Boolean,
@@ -83,11 +81,11 @@ const ProductSchema = new Schema<IProduct>(
       type: Number,
       default: 0,
     },
-    // user: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: "User",
-    //   required: true,
-    // },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
   },
   { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
 );
