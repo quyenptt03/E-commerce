@@ -14,7 +14,7 @@ export interface IProduct extends Document {
   inventory: number;
   averageRating: number;
   numOfReviews: number;
-  user: Types.ObjectId;
+  seller: Types.ObjectId;
 }
 
 const ProductSchema = new Schema<IProduct>(
@@ -81,13 +81,13 @@ const ProductSchema = new Schema<IProduct>(
       type: Number,
       default: 0,
     },
-    user: {
+    seller: {
       type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
   },
-  { timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true } }
+  { timestamps: true }
 );
 
 export default model<IProduct>("Product", ProductSchema);

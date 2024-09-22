@@ -1,4 +1,4 @@
-import { Schema, model, Document } from "mongoose";
+import { Schema, model, Document, Types } from "mongoose";
 import validator from "validator";
 import { genSalt, hash, compare } from "bcrypt";
 import uniqueValidator from "mongoose-unique-validator";
@@ -13,6 +13,7 @@ export interface IUser extends Document {
   phone?: string;
   avatar: object;
   role: string;
+  shop: Types.ObjectId;
   comparePassword(candidatePassword: string): Promise<boolean>;
 }
 
@@ -54,11 +55,19 @@ const UserSchema = new Schema<IUser>(
         path: String,
         filename: String,
       },
+      default: {
+        path: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+        filename: "avatar",
+      },
     },
     role: {
       type: String,
       enum: ["admin", "seller", "user"],
       default: "user",
+    },
+    shop: {
+      type: Schema.Types.ObjectId,
+      ref: "Shop",
     },
   },
   { timestamps: true }
