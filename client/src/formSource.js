@@ -1,7 +1,7 @@
 export const userInputs = [
   {
     id: 1,
-    label: "Họ và tên",
+    label: "Full Name",
     type: "text",
     placeholder: "Đậu Thị Tiểu Điệp",
   },
@@ -13,18 +13,18 @@ export const userInputs = [
   },
   {
     id: 3,
-    label: "Số điện thoại",
+    label: "Phone Number",
     type: "text",
     placeholder: "+1 234 567 89",
   },
   {
     id: 4,
-    label: "Tuổi",
+    label: "Age",
     type: "number", // Cập nhật từ password thành number
   },
   {
     id: 5,
-    label: "Địa chỉ",
+    label: "Address",
     type: "text",
     placeholder: "216 Phù Đổng Thiên Vương",
   },
@@ -34,13 +34,13 @@ export const userInputs = [
   export const shopInputs = [
     {
       id: 1,
-      label: "Tên Shop",
+      label: "Name Shop",
       type: "text",
       placeholder: "Apple Shop",
     },
     {
       id: 2,
-      label: "Mô tả",
+      label: "Description",
       type: "text",
       placeholder: "Description",
     },
@@ -48,17 +48,17 @@ export const userInputs = [
       id: 3,
       label: "Email",
       type: "text",
-      placeholder: "Computers",
+      placeholder: "2115196@dlu.edu.vn",
     },
     {
       id: 4,
-      label: "Số điện thoại",
+      label: "Phone Number",
       type: "text",
       placeholder: "0987654321",
     },
     {
       id: 5,
-      label: "Địa chỉ",
+      label: "Address",
       type: "text",
       placeholder: "12 Hồ Chí Minh",
     },
@@ -68,5 +68,51 @@ export const userInputs = [
       type: "text",
       placeholder: "098765432198",
     },
+  ];
+  
+  export const productInputs = [
+    {
+      id: 1,
+      label: "Product Name",
+      name: "name",
+      type: "text",
+      placeholder: "Enter product name",
+    },
+    {
+      id: 2,
+      label: "Price",
+      name: "price",
+      type: "number",
+      placeholder: "Enter product price",
+    },
+    {
+      id: 3,
+      label: "Description",
+      name: "description",
+      type: "text",
+      placeholder: "Enter product description",
+    },
+    
+    {
+      id: 4,
+      label: "Featured",
+      name: "featured",
+      type: "checkbox", 
+    },
+    {
+      id: 5,
+      label: "Inventory",
+      name: "inventory",
+      type: "number",
+      placeholder: "Enter available stock",
+    },
+    {
+      id: 6,
+      label: "Free Shipping",
+      name:"freeShipping",
+      type: "checkbox", 
+    },
+    
+    
   ];
   

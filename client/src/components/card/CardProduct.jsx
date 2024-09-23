@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './card.scss';
-import { Link } from 'react-router-dom';
 import { Circle } from '@mui/icons-material';
 import Star from '@mui/icons-material/Star';
-import StarBorder from '@mui/icons-material/StarBorder';
 function CardProduct({ item }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -46,7 +44,7 @@ function CardProduct({ item }) {
           {[...Array(5)].map((_, index) => (
           <Star key={index} style={{ color: 'gold' }} />
         ))}
-        <span className="ratingCount">(50 đánh giá)</span> {/* Số lượng đánh giá */}
+        <span className="ratingCount">(50 đánh giá)</span>
       </div>
 
       <p className="price">$
@@ -96,7 +94,11 @@ function CardProduct({ item }) {
   </div>
 
   </div>
+
+
+  
 </div>
+
     </div>
     
   );

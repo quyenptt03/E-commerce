@@ -7,7 +7,7 @@ import New from "./components/new/New";
 import Profile from "./components/profile/Profile";
 import User from "./pages/ADMIN/user/User.jsx";
 import { createBrowserRouter, RouterProvider ,Outlet } from "react-router-dom";
-import { shopInputs, userInputs } from "./formSource";
+import { shopInputs, userInputs,productInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
@@ -26,6 +26,7 @@ import CategoryDetail from "./pages/ADMIN/category/CategoryDetail.jsx";
 import BasicTabs from "./pages/ADMIN/menu_Item/Tab.jsx";
 import Product from "./pages/ADMIN/product/Products.jsx";
 import ProductDetail from "./pages/ADMIN/product/productDetail.jsx";
+import Update from "./components/update/Update.jsx";
 
 
 function App() {
@@ -117,7 +118,7 @@ function App() {
         },
         {
           path: "/products/new",
-          element: <New inputs={shopInputs} title="Add New Product" />,
+          element: <New inputs={productInputs} userType="product" title="Add New Product" />,
         },
         {
           path: "/advertisement",
