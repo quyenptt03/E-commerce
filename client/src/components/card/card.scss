@@ -1,0 +1,343 @@
+@media (max-width: 1008px) {
+  .card {
+    flex: 100%; /* Chiếm toàn bộ chiều rộng khi màn hình nhỏ */
+  }
+}
+.card {
+  display: flex;
+  flex-basis: calc(40% - 5px); 
+  gap: 20px;
+  border-radius: 10px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  padding:20px;
+  border:1px solid #ccc;
+  .imageContainer {
+    flex: 3;
+    height: 200px;
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      color: #444;
+      transition: all 0.4s ease;
+
+      &:hover {
+        color: #000;
+        scale: 1.01;
+      }
+    }
+
+    .address {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #888;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 300;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: rgba(254, 205, 81, 0.438);
+      width: max-content;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      .features {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+        height: 34px;
+        width: auto;
+        .feature {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: whitesmoke;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+
+      .icons {
+        display: flex;
+        gap: 20px;
+
+        .icon {
+          border: 1px solid #999;
+          padding: 2px 5px;
+          border-radius: 5px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            background-color: lightgray;
+          }
+        }
+      }
+    }
+  }
+}
+
+//cardCategory
+.cardCategory {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd; /* Optional: adds a border */
+  width: 180px; /* Adjust as needed */
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding:20px;
+  
+  .imageContainer {
+    width: 60%;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative; 
+  }
+  .imageContainer::after {
+    content: "";
+    position: absolute;
+    top: -4%;
+    left: -32px;
+    width: 160%;
+    height: 111px;
+    background-color: #8080802b;
+    border-radius: 10px;
+  }
+  .imageContainer img {
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top */
+    width: 100%;
+    height: auto;
+  }
+  
+  .textContainer {
+    padding: 10px;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 1rem; /* Adjust as needed */
+  }
+  
+
+  
+}
+
+
+//Card Product
+.productCategory {
+  display:flex;
+  margin: 20px;
+  column-gap: 14px;
+  flex:6;
+  .left{
+    flex:2;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 330px; // Chiều rộng của card
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding:30px;
+    .imageContainer img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .thumbnailContainer {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto; // Cho phép cuộn ngang
+      margin-top: 10px;
+    
+      .thumbnail {
+        width: 100px;
+        height: auto;
+        margin: 0 5px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    
+        &:hover {
+          border: 1px solid #000; // Đổi màu viền khi hover
+        }
+      }
+    }
+  }
+  .right{
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    padding:30px;
+    flex:4;
+    .textContainer{
+      .title{
+        margin-bottom: 10px;
+      }
+      lable{
+        font-size: 18px;
+        margin: 10px 0px;
+        font-weight: bold;
+        display: block;
+      }
+      .rating {
+        display: flex;
+        align-items: center;
+      Star{
+        margin-right: 5px;
+      }
+      .ratingCount {
+        margin-left: 10px;
+        font-size: 14px;
+        color: #888;
+      }
+    }
+      
+      
+      
+      .price{
+        font-size: 25px;
+        font-weight:bold;
+        margin:20px 0px;
+        background-color: rgb(255, 200, 134);
+        display: inline-block; 
+        padding: 5px 10px; 
+        border-radius: 5px;
+      }
+      .colors{
+        display: flex;
+        column-gap: 4px;
+        .colorItem
+        {
+          .colorCircle{
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .infoContainer {
+      display: flex; /* Sử dụng Flexbox */
+      flex-direction: column; /* Đặt chiều dọc */
+      gap: 10px; 
+      .infoItem {
+        display: flex; /* Sử dụng Flexbox cho mỗi mục */
+        align-items: center; 
+        label {
+          font-size: 18px;
+            margin: 10px ;
+            font-weight: bold;
+        }
+      }
+    }
+    
+
+    
+  }
+}
+
+//card rate
+.reviewCard {
+  display: flex;
+  margin: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+
+  .avatar {
+    margin-right: 20px;
+    img {
+      border-radius: 50%;
+      width:74px; 
+      height: 74px; 
+    }
+  }
+  .reviewContent {
+    display: flex;
+    flex-direction: column;
+    .reviewerName {
+      font-weight: bold;
+      margin: 0;
+    }
+    .reviewContainer {
+      display: flex;
+      align-items: center; 
+      .rating {
+        margin-right: 10px; 
+        color: gold; 
+      }
+      .reviewTitle {
+        font-size: 16px;
+      }
+      
+    }
+    
+    .reviewDate {
+      font-size: 12px;
+      color: #888;
+      margin-top: 5px;
+    }
+    
+    .reviewText {
+      margin-top: 20px;
+    }
+    .reviewImages 
+    {
+      margin-top: 10px;
+      img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+    }
+  }
+  hr{
+    background-color: #ccc;
+    margin: 0;;
+  }
+  
+}
+
+
+
+
+
+
+
+
