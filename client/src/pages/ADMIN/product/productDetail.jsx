@@ -1,62 +1,80 @@
-import {useLocation } from 'react-router-dom';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import CardProduct from "../../../components/card/CardProduct.jsx";
 import { productsRows } from '../../../datatablesource.js';
 import { productInputs } from '../../../formSource.js';
 import CardRate from '../../../components/card/CardRate.jsx';
-import "./product.css"
 import Update from '../../../components/update/Update.jsx';
+import "./product.css";
+import { useState } from "react";
 function ProductDetail() {
-    const location = useLocation();
-    const { id } = location.state || {};
-    const productInfo = productsRows.find((user) => user.id === id);
-    const filteredReviews = reviews.filter((review) => review.productId === id);
-    if (!productInfo) {
-      return <div className="shopDetailContainer">User not found</div>;
-    }
-  console.log(productInfo);
+  const [activeTab, setActiveTab] = useState('details');
+
+  const location = useLocation();
+  const { id } = location.state || {};
+  const productInfo = productsRows.find((product) => product.id === id);
+  const filteredReviews = reviews.filter((review) => review.productId === id);
+
+  if (!productInfo) {
+    return <div className="shopDetailContainer">Product not found</div>;
+  }
+
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
 
   return (
     <>
-    <div className='listProductsDetail'>
-    <p className='titleProductDetail'>Product Detail</p>
-        <div className='left'>  
-        <CardProduct key={productInfo.id} item={productInfo} />
-        </div>
-        <div className='rate'>
-                <div className="RateLeft">
-                  
-                </div>
-                <div className="RateRight">
-                  <p className='titleRateRight'>Rate of Product</p>
-                  <hr></hr>
+      <div className='tabs'>
+        <button className={`tab ${activeTab === 'details' ? 'active' : ''}`} onClick={() => handleTabChange('details')}>
+          Product Details
+        </button>
+        <button className={`tab ${activeTab === 'update' ? 'active' : ''}`} onClick={() => handleTabChange('update')}>
+          Update Product
+        </button>
+      </div>
+      
+      <div className='listProductsDetail'>
+        {activeTab === 'details' && (
+          <>
+            <p className='titleProductDetail'>Product Detail</p>
+            <div className='left'>  
+              <CardProduct key={productInfo.id} item={productInfo} />
+            </div>
+            <div className='rate'>
+              <div className="RateLeft">
+                {/* Additional content can be added here if needed */}
+              </div>
+              <div className="RateRight">
+                <p className='titleRateRight'>Rate of Product</p>
+                <hr />
                 {filteredReviews.length > 0 ? (
-                                filteredReviews.map((review) => (
-                                  
-                                  <>
-                                  <CardRate
-                                  key={review.id}
-                                  avatar={review.avatar}
-                                  name={review.name}
-                                  rate={review.rate}
-                                  reviewTitle={review.reviewTitle}
-                                  reviewDate={review.reviewDate}
-                                  reviewText={review.reviewText}
-                                  images={review.images}
-                              />
-                                  </>
-                                ))
-                            ) : (
-                                <p className="noti">No reviews available for this product.</p>
-                            )}
-                 </div>
-          </div>
-       
-        <div ><Update inputs={productInputs} title="Update Product" userType="product" id={productInfo}/></div>
+                  filteredReviews.map((review) => (
+                    <CardRate
+                      key={review.id}
+                      avatar={review.avatar}
+                      name={review.name}
+                      rate={review.rate}
+                      reviewTitle={review.reviewTitle}
+                      reviewDate={review.reviewDate}
+                      reviewText={review.reviewText}
+                      images={review.images}
+                    />
+                  ))
+                ) : (
+                  <p className="noti">No reviews available for this product.</p>
+                )}
+              </div>
+            </div>
+          </>
+        )}
         
-    </div>
-    
+        {activeTab === 'update' && (
+          <Update inputs={productInputs} title="Update Product" userType="product" id={productInfo.id} />
+        )}
+      </div>
     </>
-    
   );
 }
 
@@ -73,8 +91,8 @@ const reviews = [
     reviewDate: 'Reviewed in Canada on 16 November 2023',
     reviewText: 'Medium thickness. Did not shrink after wash. Good elasticity. XL size perfectly fit for 5.10 height and heavy body. Did not fade after wash. Only for maroon colour t-shirt colour lightly gone in first wash but not faded. I bought 5 t-shirts of different colours. Highly recommended in so low price.',
     images: [
-      'https://via.placeholder.com/150', // Đây là hình minh họa đầu tiên
-      'https://via.placeholder.com/150'  // Đây là hình minh họa thứ hai
+      'https://via.placeholder.com/150',
+      'https://via.placeholder.com/150'
     ]
   },
   {

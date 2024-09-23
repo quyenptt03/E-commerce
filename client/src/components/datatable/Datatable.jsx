@@ -9,7 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import * as React from "react";
 
-const Datatable = ({ nameTable, columns, dataSource, dialog, url }) => {
+const Datatable = ({ nameTable, columns, dataSource, dialog, url ,type}) => {
   const [data, setData] = useState(dataSource);
   const [open, setOpen] = React.useState(false);
   const [selectedRow, setSelectedRow] = React.useState(null);
@@ -110,7 +110,7 @@ const Datatable = ({ nameTable, columns, dataSource, dialog, url }) => {
               </>
             ): (
               
-              <Link to={`/${url}/${params.row.id}`} state={{ id: params.row.id }} style={{ textDecoration: "none" }}>
+              <Link to={`/${type}/${url}/${params.row.id}`} state={{ id: params.row.id }} style={{ textDecoration: "none" }}>
                 <div className="viewButton">Detail</div>
               </Link>
             )}
@@ -120,9 +120,6 @@ const Datatable = ({ nameTable, columns, dataSource, dialog, url }) => {
             >
               Delete
             </div>
-               <Link to={`/${url}/${params.row.id}`} state={{ id: params.row.id }} style={{ textDecoration: "none" }}>
-                <div className="viewButton">Update</div>
-              </Link>
           </div>
         );
       },
@@ -144,7 +141,7 @@ const Datatable = ({ nameTable, columns, dataSource, dialog, url }) => {
           </div>
        
         ):(
-          <Link to={`/${url}/new`} className="link">
+          <Link to={`${type}/${url}/new`} className="link">
           Add
         </Link>
         )}

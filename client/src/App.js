@@ -7,7 +7,7 @@ import New from "./components/new/New";
 import Profile from "./components/profile/Profile";
 import User from "./pages/ADMIN/user/User.jsx";
 import { createBrowserRouter, RouterProvider ,Outlet } from "react-router-dom";
-import { shopInputs, userInputs,productInputs } from "./formSource";
+import { shopInputs, userInputs,productInputs,shipmentInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
@@ -26,7 +26,8 @@ import CategoryDetail from "./pages/ADMIN/category/CategoryDetail.jsx";
 import BasicTabs from "./pages/ADMIN/menu_Item/Tab.jsx";
 import Product from "./pages/ADMIN/product/Products.jsx";
 import ProductDetail from "./pages/ADMIN/product/productDetail.jsx";
-import Update from "./components/update/Update.jsx";
+import Shipments from "./pages/ADMIN/shipment/Shipment.jsx";
+import ShipmentDetail from "./pages/ADMIN/shipment/shipmentDetail.jsx";
 
 
 function App() {
@@ -56,86 +57,98 @@ function App() {
           element: <Register />,
         },
     {
-      path: "/",
+      path: "/admin",
       element: <Layout />,
       children: [
         {
-          path: "/",
+          path: "/admin",
           element: <Home />,
         },
         {
-          path: "profile",
+          path: "/admin/profile",
           element: <Profile />,
         },
         {
-          path: "/check-shop",
+          path: "/admin/check-shop",
           element: <CheckShop />,
         },
         {
-          path: "/stats",
+          path: "/admin/stats",
           element: <Stats />,
         },
         {
-          path: "/mess",
+          path: "/admin/mess",
           element: <Chat />,
           loader: chatLoader, 
         },
         {
-          path: "/shops",
+          path: "/admin/shops",
           element: <Shop />,
         },
         {
-          path: "/shops/:shopId",
+          path: "/admin/shops/:shopId",
           element: <ShopDetail />,
         },
         {
-          path: "/shops/new",
+          path: "/admin/shops/new",
           element: <New inputs={shopInputs} title="Add new Shop" userType="shop"/>,
         },
         {
-          path: "/users",
+          path: "/admin/users",
           element: <User />,
         },
         {
-          path: "/users-check",
+          path: "/admin/users-check",
           element: <CheckUser />,
         },
         {
-          path: "/users/:userId",
+          path: "/admin/users/:userId",
           element: <UserDetail />,
         },
         {
-          path: "/users/new",
+          path: "/admin/users/new",
           element: <New inputs={userInputs} title="Add new user" userType="user"/>,
         },
         {
-          path: "/products",
+          path: "/admin/products",
           element: <Product />,
         },
         {
-          path: "/products/:productId",
+          path: "/admin/products/:productId",
           element: <ProductDetail />,
         },
         {
-          path: "/products/new",
+          path: "/admin/products/new",
           element: <New inputs={productInputs} userType="product" title="Add New Product" />,
         },
         {
-          path: "/advertisement",
+          path: "/admin/advertisement",
           element: <Advertisement/>,
         },
         {
-          path: "/categories",
+          path: "/admin/categories",
           element: <Category/>,
 
         },
         {
-          path: "/categories/:categoriesId",
+          path: "/admin/categories/:categoriesId",
           element: <CategoryDetail/>,
         },
         {
-          path: "/menu_item",
+          path: "/admin/menu_item",
           element: <BasicTabs/>,
+        },
+        {
+          path: "/admin/shipments",
+          element: <Shipments/>,
+        },
+        {
+          path: "/admin/shipments/new",
+          element: <New inputs={shipmentInputs} userType="shipment" title="Add New Shipment" />,
+        },
+        {
+          path: "/admin/shipments/:id",
+          element: <ShipmentDetail/>,
         },
       ],
     },

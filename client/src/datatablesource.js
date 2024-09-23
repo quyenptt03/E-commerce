@@ -706,3 +706,66 @@ export const productsColumns = [
     width: 100,
   },
 ];
+
+export const shipmentsColumns = [
+  { field: "id", headerName: "ID", width: 70 },
+  {
+    field: "name",
+    headerName: "Shipment Name",
+    width: 230,
+  },
+  {
+    field: "phoneNumber",
+    headerName: "Phone Number",
+    width: 150,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    width: 130,
+  },
+  {
+    field: "description",
+    headerName: "Description",
+    width: 250,
+  },
+];
+
+
+export const shipmentsRows = [
+  {
+    id: 1,
+    name: "Shipment A",
+    phoneNumber: "0912345678",
+    status: "đang giao",
+    description: "Giao hàng đến 123 Lê Lợi, quận 1, TP.HCM. Hàng hóa dễ vỡ.",
+  },
+  {
+    id: 2,
+    name: "Shipment B",
+    phoneNumber: "0909876543",
+    status: "đang giao",
+    description: "Giao hàng đến 456 Nguyễn Huệ, quận 3, Hà Nội. Kiện hàng nặng 20kg.",
+  },
+  {
+    id: 3,
+    name: "Shipment C",
+    phoneNumber: "0987654321",
+    status: "nghỉ",
+    description: "Giao hàng đến 789 Hoàng Diệu, quận 5, TP.HCM. Kiện hàng gồm thực phẩm khô.",
+  },
+  {
+    id: 4,
+    name: "Shipment D",
+    phoneNumber: "0933456789",
+    status: "đang giao",
+    description: "Giao hàng đến 321 Trần Hưng Đạo, quận 7, Đà Nẵng. Hàng hóa dễ vỡ.",
+  },
+  {
+    id: 5,
+    name: "Shipment E",
+    phoneNumber: "0901234567",
+    status: "nghỉ",
+    description: "Giao hàng đến 654 Phan Châu Trinh, quận 9, TP.HCM. Hàng hóa nặng, yêu cầu bốc xếp.",
+  },
+];

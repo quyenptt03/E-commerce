@@ -1,19 +1,18 @@
 
 import React, { useEffect, useState } from "react";
-import "./Notification.css"
+import "./notification.css"
 const NotificationBox = ( { onNotificationCountChange }) => {
   const [notifications, setNotifications] = useState([]);
   const [triggerFetch, setTriggerFetch] = useState(false); 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const response = await fetchNotifications(token);
-        // console.log(response);
         const response = [
-          { message: "Herd A has reached the harvest age." },
-          { message: "Herd B has reached the harvest age." },
-          { message: "Herd C has reached the harvest age." },
+          { message: "New registration alert." },
+          { message: "Fake account alert." },
+          { message: "New product alert: Item 21334 is a best-seller!" },
         ];
+        
         const newNotifications = response.slice(0, 3).map((notification) => {
           const message = notification.message;
           let translatedMessage = message;

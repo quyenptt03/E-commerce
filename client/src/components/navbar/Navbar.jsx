@@ -2,13 +2,30 @@ import "./navbar.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
+import React, { useState } from 'react';
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import NotificationBox from "../notification/Notification";
 
 const Navbar = () => {
   const { dispatch } = useContext(DarkModeContext);
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleNotification = () => {
+    setIsOpen(!isOpen);
+  };
+  const handleClickOutside = (event) => {
+    if (isOpen && !event.target.closest('.notification-area')) {
+      setIsOpen(false);
+    }
+  };
 
+  React.useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isOpen]);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -23,14 +40,11 @@ const Navbar = () => {
               onClick={() => dispatch({ type: "TOGGLE" })}
             />
           </div>
-          <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon" />
-            <div className="counter">1</div>
-          </div>
-          {/* <div className="item">
-            <ChatBubbleOutlineOutlinedIcon className="icon" />
-            <div className="counter">2</div>
-          </div> */}
+          <div className="item" onClick={toggleNotification}>
+             <NotificationsNoneOutlinedIcon className={`${isOpen ? 'active' : 'icon'}`} />
+              <div className="counter">1</div>
+            </div>
+            {isOpen && <NotificationBox />}
           <div className="item">
             <img
               src="https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"

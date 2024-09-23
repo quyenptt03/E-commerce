@@ -4,7 +4,7 @@ function Product() {
     
   return (
     <>
-        <Datatable nameTable="All Product List"columns={productsColumns} dataSource={productsRows} dialog={false} url="products" />
+        <Datatable nameTable="All Product List"columns={productsColumns} dataSource={productsRows} type="admin"  dialog={false} url="products" />
        
     </>
     

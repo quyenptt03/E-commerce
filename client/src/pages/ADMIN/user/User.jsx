@@ -5,7 +5,7 @@ import {userColumns,userRows} from "../../../datatablesource"
 const User = () => {
   return (
     <div >
-        <Datatable nameTable="List user" columns={userColumns} dataSource={userRows} dialog={false} url="users" />
+        <Datatable nameTable="List user" columns={userColumns} dataSource={userRows}  type="admin" dialog={false} url="users" />
       </div>
   )
 }

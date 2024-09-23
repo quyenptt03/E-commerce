@@ -4,7 +4,7 @@ import {shopColumns,shopRows} from "../../../datatablesource"
 const List = () => {
   return (
     <div>
-        <Datatable nameTable="Danh sách Shop"columns={shopColumns} dataSource={shopRows} dialog={false} url="shops" />
+        <Datatable nameTable="Danh sách Shop"columns={shopColumns} dataSource={shopRows} type="admin"  dialog={false} url="shops" />
     </div> 
   )
 }

@@ -5,7 +5,7 @@ function CardCategory({ item }) {
   return (
     <div className="cardCategory">
       <Link
-        to={`/categories/${item.id}`}
+        to={`/admin/categories/${item.id}`}
         state={{ category: item }}
         className="imageContainer"
         style={{ textDecoration: 'none' }} 
