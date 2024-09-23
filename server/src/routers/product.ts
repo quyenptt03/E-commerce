@@ -6,6 +6,7 @@ import {
   updateProduct,
   deleteProduct,
   uploadImages,
+  getProductsByShop,
 } from "../controllers/product";
 import uploadCloud from "../middlewares/upload-cloud";
 import {
@@ -32,6 +33,8 @@ router
     uploadCloud.array("images", 10),
     uploadImages
   );
+
+router.route("/shop/:id").get(getProductsByShop);
 
 router.route("/:id").get(getProduct).patch(updateProduct).delete(deleteProduct);
 

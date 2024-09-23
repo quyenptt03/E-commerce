@@ -1,21 +1,36 @@
+import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
-import { Product } from "../models";
+import { Product, User } from "../models";
 import CustomError from "../errors";
 import { remove, upload } from "./cloudinary";
 
-const createProduct = async (req, res) => {
-  req.body.user = req.user.userId;
+const createProduct = async (req: Request, res: Response) => {
+  //@ts-ignore
+  req.body.seller = req.user.userId;
   const product = await Product.create(req.body);
+
   res.status(StatusCodes.CREATED).json({ product });
 };
 
-const getAllProducts = async (req, res) => {
+const getAllProducts = async (req: Request, res: Response) => {
   const products = await Product.find({});
 
   res.status(StatusCodes.OK).json({ products, count: products.length });
 };
 
-const getProduct = async (req, res) => {
+const getProductsByShop = async (req: Request, res: Response) => {
+  const { id: shopId } = req.params;
+  const shop = await User.find({ id: shopId });
+  if (!shop) {
+    throw new CustomError.BadRequestError("Can't find the shop");
+  }
+
+  const products = await Product.find({ seller: shopId });
+
+  res.status(StatusCodes.OK).json({ products, count: products.length });
+};
+
+const getProduct = async (req: Request, res: Response) => {
   const { id: productId } = req.params;
 
   const product = await Product.findOne({ _id: productId });
@@ -27,7 +42,7 @@ const getProduct = async (req, res) => {
   res.status(StatusCodes.OK).json({ product });
 };
 
-const updateProduct = async (req, res) => {
+const updateProduct = async (req: Request, res: Response) => {
   const { id: productId } = req.params;
 
   const product = await Product.findOneAndUpdate({ _id: productId }, req.body, {
@@ -42,7 +57,7 @@ const updateProduct = async (req, res) => {
   res.status(StatusCodes.OK).json({ product });
 };
 
-const deleteProduct = async (req, res) => {
+const deleteProduct = async (req: Request, res: Response) => {
   const { id: productId } = req.params;
 
   const product = await Product.findOne({ _id: productId });
@@ -59,7 +74,7 @@ const deleteProduct = async (req, res) => {
   res.status(StatusCodes.OK).json({ msg: "Success! Product removed." });
 };
 
-const uploadImages = async (req, res) => {
+const uploadImages = async (req: Request, res: Response) => {
   if (!req.files) {
     throw new CustomError.BadRequestError("No files uploaded");
   }
@@ -85,6 +100,7 @@ const uploadImages = async (req, res) => {
 export {
   createProduct,
   getAllProducts,
+  getProductsByShop,
   getProduct,
   updateProduct,
   deleteProduct,
