@@ -28,8 +28,8 @@ function Card({ item }) {
             </div>
           </div>
           <div className="icons">
-            <span>Bắt đầu: <p>{item.startDate.toDateString()}</p></span>
-            <span>Kết thúc: <p>{item.endDate.toDateString()}</p></span>
+            <span><p>{item.startDate.toDateString()}</p></span>
+            <span><p>{item.endDate.toDateString()}</p></span>
           </div>
         </div>
       </div>
