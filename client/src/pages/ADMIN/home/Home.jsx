@@ -9,10 +9,10 @@ const Home = () => {
   return (
     <div >
         <div className="widgets">
-          <Widget type="user" />
-          <Widget type="order" />
-          <Widget type="earning" />
-          <Widget type="balance" />
+          <Widget type="customers" />
+          <Widget type="sales" />
+          <Widget type="products" />
+          <Widget type="savings" />
         </div>
         <div className="charts">
 {/*           <Featured /> */}
