@@ -200,7 +200,7 @@ export const shopRows = [
   {
     id: 1,
     name: "SnowABCShop",
-    img: "https://cdn.pixabay.com/photo/2023/01/15/17/58/nature-7720825_640.jpg",
+    img: "https://i.ebayimg.com/thumbs/images/g/PxoAAOSwB15nAV9f/s-l960.webp",
     status: false,
     email: "1snow@gmail.com",
     phoneNumber:"0987654321",
@@ -223,7 +223,7 @@ export const shopRows = [
   {
     id: 2,
     name: "LannisterShop",
-    img: "https://cdn.pixabay.com/photo/2023/02/18/11/22/cactus-7797750_640.jpg",
+    img: "https://i.ebayimg.com/thumbs/images/g/mNsAAOSwem5nNPvB/s-l500.jpg",
     status: false,
     email: "2lannister@gmail.com",
     phoneNumber:"0987654321",
@@ -235,7 +235,7 @@ export const shopRows = [
   {
     id: 7,
     name: "MartellShop",
-    img: "https://cdn.pixabay.com/photo/2023/02/18/11/22/cactus-7797750_640.jpg",
+    img: "https://i.ebayimg.com/images/g/j3sAAOSw7VJnWHfR/s-l500.webp",
     status: true,
     description:"",
     email: "martellshop@gmail.com",
@@ -248,7 +248,7 @@ export const shopRows = [
   {
     id: 3,
     name: "StarkShop",
-    img: "https://cdn.pixabay.com/photo/2023/02/18/11/22/cactus-7797750_640.jpg",
+    img: "https://i.ebayimg.com/images/g/zhkAAOSwcVFiQU0D/s-l500.webp",
     status: false,
     email: "starkshop@gmail.com",
     phoneNumber:"0987654321",
@@ -260,7 +260,7 @@ export const shopRows = [
   {
     id: 8,
     name: "BoltonShop",
-    img: "https://cdn.pixabay.com/photo/2023/02/18/11/22/cactus-7797750_640.jpg",
+    img: "https://cdn.pixabay.com/photo/2024/11/07/18/48/sofa-9181557_640.jpg",
     status: true,
     email: "boltonshop@gmail.com",
     phoneNumber:"0987654321",
@@ -272,7 +272,7 @@ export const shopRows = [
   {
     id: 4,
     name: "TargaryenShop",
-    img: "https://cdn.pixabay.com/photo/2023/02/18/11/22/cactus-7797750_640.jpg",
+    img: "https://cdn.pixabay.com/photo/2024/02/21/13/15/lipstick-8587707_1280.jpg",
     status: false,
     email: "targaryenshop@gmail.com",
     phoneNumber:"0987654321",
@@ -284,7 +284,7 @@ export const shopRows = [
   {
     id: 9,
     name: "TyrellShop",
-    img: "https://cdn.pixabay.com/photo/2023/02/18/11/22/cactus-7797750_640.jpg",
+    img: "https://cdn.pixabay.com/photo/2024/02/23/22/20/forest-8592902_640.jpg",
     status: true,
     email: "tyrellshop@gmail.com",
     phoneNumber:"0987654321",
@@ -296,7 +296,7 @@ export const shopRows = [
   {
     id: 5,
     name: "BaratheonShop",
-    img: "https://cdn.pixabay.com/photo/2023/02/18/11/22/cactus-7797750_640.jpg",
+    img: "https://cdn.pixabay.com/photo/2023/04/24/06/08/bottlebrushes-7947303_640.jpg",
     status: false,
     email: "baratheonshop@gmail.com",
     phoneNumber:"0987654321",
