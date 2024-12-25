@@ -257,7 +257,11 @@ export default function MessContent({ chatsId }) {
               }}
               key={message.id}
             >
-              <p>{message.text}</p>
+              <p style="
+                  background-color: aliceblue;
+                  padding: 8px;
+                  border-radius: 8px;
+              ">{message.text}</p>
               <span>{format(message.createdAt)}</span>
             </div>
           ))}
