@@ -9,7 +9,7 @@ export const userInputs = [
     id: 2,
     label: "Email",
     type: "mail",
-    placeholder: "john_doe@gmail.com",
+    placeholder: "daudiep2003@gmail.com",
   },
   {
     id: 3,
