@@ -91,10 +91,10 @@ const Widget = ({ type }) => {
         <span className="link">{data.link}</span>
       </div>
       <div className="right">
-        <div className={`percentage ${diff > 0 ? "positive" : "negative"}`}>
+{/*         <div className={`percentage ${diff > 0 ? "positive" : "negative"}`}>
           <ArrowUpwardIcon />
           {diff} %
-        </div>
+        </div> */}
         {data.icon}
       </div>
     </div>
