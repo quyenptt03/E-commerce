@@ -1,6 +1,6 @@
 @media (max-width: 1008px) {
   .card {
-    flex: 100%; /* Chiếm toàn bộ chiều rộng khi màn hình nhỏ */
+    flex: 100%; 
   }
 }
 .card {
@@ -60,7 +60,7 @@
       font-weight: 300;
       padding: 5px;
       border-radius: 5px;
-      background-color: rgba(254, 205, 81, 0.438);
+      background-color: rgb(41 102 255 / 35%);
       width: max-content;
     }
 
@@ -111,10 +111,10 @@
 .cardCategory {
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #ddd; /* Optional: adds a border */
-  width: 180px; /* Adjust as needed */
+  border: 1px solid #ddd; 
+  width: 180px; 
   margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,7 +140,7 @@
     border-radius: 10px;
   }
   .imageContainer img {
-    border-radius: 10px 10px 0 0; /* Rounded corners for the top */
+    border-radius: 10px 10px 0 0; 
     width: 100%;
     height: auto;
   }
@@ -151,7 +151,7 @@
   
   .title {
     font-weight: bold;
-    font-size: 1rem; /* Adjust as needed */
+    font-size: 1rem; 
   }
   
 
