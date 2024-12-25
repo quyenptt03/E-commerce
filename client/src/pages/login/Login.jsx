@@ -15,6 +15,7 @@ const Login=()=> {
     e.preventDefault();
     // Handle form submission logic
     console.log({ email, password, rememberMe });
+    window.location.href = "https://e-commerce-five-sage-weld.vercel.app/";
   };
 
   return (
